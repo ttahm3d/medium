@@ -1,0 +1,6 @@
+name = "week-13-offline"
+compatibility_date = "2023-12-01"
+
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiNzdiMjAzZTItN2MzOC00YTdlLTg3NjMtOTkxODM5ODVmZjRiIiwidGVuYW50X2lkIjoiZDM4ODk0MjJmNTg5MmNmZDE5NGI0YmQxZWYzZWQxMDlmMDA2MmI5MTczY2E3Y2MwMmUxMzM1ZDhhY2U5MzkxOCIsImludGVybmFsX3NlY3JldCI6IjliZjRkNzMzLTZiZmUtNGMwOS1iZjgwLWNkNzk4M2IxNTRjNiJ9.vevIRDyFZxG9L70PKqOF_uA7bGAOw3MUmbpFpYK5mVg"
+JWT_SECRET = "Tahir"
