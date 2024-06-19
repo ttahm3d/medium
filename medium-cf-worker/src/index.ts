@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { userRouter } from "./router/user";
 import { blogRouter } from "./router/blog";
+import { cors } from "hono/cors";
 
 const app = new Hono<{
   Bindings: {
@@ -8,6 +9,8 @@ const app = new Hono<{
     JWT_SECRET: String;
   };
 }>();
+
+app.use("/*", cors());
 
 app.get("/", (c) => {
   c.env.JWT_SECRET;

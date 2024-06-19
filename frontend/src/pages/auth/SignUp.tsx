@@ -1,3 +1,4 @@
+import { postSignUp } from "@/lib/services/post";
 import { SignupInput } from "@ttahm3d/medium-blog-ttahm3d-types";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -9,10 +10,16 @@ export default function SignIn() {
     username: "",
   });
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    postSignUp(signUp);
+    setSignUp({ email: "", password: "", username: "" });
+  };
+
   return (
     <section className="grid grid-cols-2 min-h-screen">
       <div className="h-full w-full flex items-center justify-center">
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <h3 className="text-3xl font-bold text-teal-900 text-center">
             Create an account
           </h3>

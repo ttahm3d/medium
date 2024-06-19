@@ -8,9 +8,7 @@ import {
 
 export const postSignIn = async (signin: SigninInput) => {
   try {
-    const response = await axiosInstance.post("/user/signin", {
-      signin,
-    });
+    const response = await axiosInstance.post("/user/signin", { ...signin });
     if (response.status === 200) {
       const token = response.data.token;
       localStorage.setItem("token", token);
@@ -20,10 +18,10 @@ export const postSignIn = async (signin: SigninInput) => {
   }
 };
 
-export const postSignUp = async (signin: SignupInput) => {
+export const postSignUp = async (signup: SignupInput) => {
   try {
     const response = await axiosInstance.post("/user/signup", {
-      signin,
+      ...signup,
     });
     if (response.status === 201) {
       const token = response.data.token;

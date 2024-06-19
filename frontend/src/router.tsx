@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
-import Blog from "./pages/auth/blog";
+import Blog from "./pages/blog";
 
 export default function Router() {
   return (
