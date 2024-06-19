@@ -15,7 +15,7 @@ export default function SignIn() {
           <h3 className="text-3xl font-bold text-teal-900 text-center">
             Sign In
           </h3>
-          <h4 className="text-center -mt-3">
+          <h4 className="text-center -mt-3 text-sm">
             Don&apos;t have an account?{" "}
             <NavLink
               className="underline underline-offset-2 decoration-teal-900"
@@ -38,7 +38,7 @@ export default function SignIn() {
               onChange={(e) =>
                 setSignIn((pSignIn) => ({
                   ...pSignIn,
-                  password: e.target.value,
+                  email: e.target.value,
                 }))
               }
             />
@@ -64,19 +64,23 @@ export default function SignIn() {
             />
           </div>
           <div className="flex mt-3 gap-4 justify-center">
-            <button className="px-6 py-2 rounded-md border text-teal-900 border-teal-900">
+            <button
+              type="reset"
+              className="px-6 py-2 rounded-md border text-teal-900 border-teal-900">
               Cancel
             </button>
-            <button className="px-6 py-2 rounded-md border bg-teal-900 text-white">
+            <button
+              type="submit"
+              className="px-6 py-2 rounded-md border bg-teal-900 text-white">
               Sign In
             </button>
           </div>
         </form>
       </div>
-      <div className="bg-neutral-100 flex items-start px-24 justify-center flex-col  h-full w-full">
+      <div className="bg-neutral-200 flex items-start px-24 justify-center flex-col  h-full w-full">
         <h2 className="text-3xl font-bold text-neutral-950 max-w-3xl">
-          The customer service I received was exceptional. The support team went
-          above and beyond to address my concerns
+          "The customer service I received was exceptional. The support team
+          went above and beyond to address my concerns."
         </h2>
         <h4 className="font-bold text-lg mt-4">Jules Winnfield</h4>
         <p className="text-neutral-500">CEO, ACME Inc</p>
